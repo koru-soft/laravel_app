@@ -402,11 +402,11 @@ class TodoController extends Controller
         } */
 
         //$test = $this->todo->fill($input)->save(); dd($test); →　true
-        return redirect()->to('todo');
+        // return redirect()->to('todo');
+        return redirect()->route('todo.index');
     }
     /*return redirect()->route('todo.index');で書くこともできる
     今回の書き方だと、todoの名前を変えた時、toの引数も一緒に変更しなきゃいけない
-  
     */
 
     //redirect()->to()
