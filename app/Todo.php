@@ -3,14 +3,20 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes; // 追記
 
 class Todo extends Model
 {
+  use SoftDeletes;
+
     protected $fillable = 
     [
       'title',
       'user_id'
     ];// 追記
+
+    protected $softDelete = ['deleted_at'];
+    //追記
 
     public function getByUserId($id)
     {
