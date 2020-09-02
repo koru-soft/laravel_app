@@ -26,7 +26,7 @@ class AddSoftDeletes extends Migration
     public function down()
     {
         Schema::table('todos', function (Blueprint $table) {
-            //
+            $table->dropColumn('deleted_at');//追記
         });
     }
 }
