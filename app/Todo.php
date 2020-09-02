@@ -15,9 +15,6 @@ class Todo extends Model
       'user_id'
     ];// 追記
 
-    protected $softDelete = ['deleted_at'];
-    //追記
-
     public function getByUserId($id)
     {
         return $this->where('user_id', $id)->get();
